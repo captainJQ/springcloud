@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/consumerone/consumer-one.iml" filepath="$PROJECT_DIR$/consumerone/consumer-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaone/eurekaone.iml" filepath="$PROJECT_DIR$/eurekaone/eurekaone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekatwo/eurekatwo.iml" filepath="$PROJECT_DIR$/eurekatwo/eurekatwo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-one/provider-one.iml" filepath="$PROJECT_DIR$/provider-one/provider-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-two/provider-two.iml" filepath="$PROJECT_DIR$/provider-two/provider-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
     </modules>
   </component>
 </project>

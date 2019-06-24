@@ -13,10 +13,10 @@ public class TestController {
 
     @RequestMapping(value = "/test")
     public String test(){
-        String reqUrl = "http://provider/provider/test";
+        String reqUrl = "http://ljq-provider/provider/test";
         String result = restTemplate.getForObject(reqUrl, String.class);
 
-        System.out.println("consumer-one consumed by" + reqUrl);
+        System.out.println("consumer-one consumed by" + result);
         return "consumer-one consumed";
     }
 }

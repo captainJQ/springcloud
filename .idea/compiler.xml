@@ -6,23 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="consumer-one" />
+        <module name="eurekaone" />
+        <module name="eurekatwo" />
+        <module name="provider-one" />
         <module name="provider-two" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="consumerone" target="1.8" />
+      <module name="consumer-one" target="1.8" />
       <module name="eureka" target="1.8" />
-      <module name="parent" target="1.5" />
+      <module name="eurekaone" target="1.8" />
+      <module name="eurekatwo" target="1.8" />
+      <module name="provider-one" target="1.8" />
       <module name="provider-two" target="1.8" />
-      <module name="providerone" target="1.8" />
+      <module name="providertwo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="consumerone" options="-parameters" />
-      <module name="eureka" options="-parameters" />
+      <module name="consumer-one" options="-parameters" />
+      <module name="eurekaone" options="-parameters" />
+      <module name="eurekatwo" options="-parameters" />
+      <module name="provider-one" options="-parameters" />
       <module name="provider-two" options="-parameters" />
-      <module name="providerone" options="-parameters" />
     </option>
   </component>
 </project>
