@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/provider-one/provider-one.iml" filepath="$PROJECT_DIR$/provider-one/provider-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-two/provider-two.iml" filepath="$PROJECT_DIR$/provider-two/provider-two.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeepper/zookeepper.iml" filepath="$PROJECT_DIR$/zookeepper/zookeepper.iml" />
     </modules>
   </component>
 </project>
