@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/eurekatwo/pom.xml" />
         <option value="$PROJECT_DIR$/provider-one/pom.xml" />
         <option value="$PROJECT_DIR$/zookeepper/pom.xml" />
+        <option value="$PROJECT_DIR$/zookeeperproviderone/pom.xml" />
+        <option value="$PROJECT_DIR$/zookeeperprovidertwo/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumer-one" />
-        <module name="eurekaone" />
+        <module name="zookeeperproviderone" />
+        <module name="provider-two" />
+        <module name="zookeeperprovidertwo" />
         <module name="eurekatwo" />
         <module name="provider-one" />
-        <module name="provider-two" />
+        <module name="consumer-one" />
         <module name="zookeepper" />
+        <module name="eurekaone" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="provider-one" target="1.8" />
       <module name="provider-two" target="1.8" />
       <module name="providertwo" target="1.5" />
+      <module name="zookeeperproviderone" target="1.8" />
+      <module name="zookeeperprovidertwo" target="1.8" />
       <module name="zookeepper" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -32,6 +36,8 @@
       <module name="eurekatwo" options="-parameters" />
       <module name="provider-one" options="-parameters" />
       <module name="provider-two" options="-parameters" />
+      <module name="zookeeperproviderone" options="-parameters" />
+      <module name="zookeeperprovidertwo" options="-parameters" />
       <module name="zookeepper" options="-parameters" />
     </option>
   </component>
