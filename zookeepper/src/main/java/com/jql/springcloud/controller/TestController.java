@@ -9,9 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @RestController
-@RequestMapping(value = "/provider")
+@RequestMapping(value = "/consumer")
 public class TestController {
 
     @Autowired
@@ -20,9 +21,12 @@ public class TestController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @RequestMapping(value = "/test")
     public String test(){
-        restTemplate.getForObject(getServiceUrl("zookeeper-provider"),String.class);
-        return "zookeeper-provider-in-service";
+        String url = "http://"+getServiceUrl("zookeeper-provider")+"/provider/test";
+        System.out.println(url);
+        System.out.println(restTemplate.getForObject(url,String.class));
+        return "zookeeper-consumer-in-service";
     }
 
     @RequestMapping(value = "/getServices")
@@ -34,15 +38,17 @@ public class TestController {
     public List<String> getServiceUrls(String name){
         List<ServiceInstance> instances = discoveryClient.getInstances(name);
         List<String> urlList = new ArrayList<>();
-        instances.stream().forEach((instance)->urlList.add(instance.getHost()));
+        instances.stream().forEach((instance)->urlList.add(instance.getHost()+":"+instance.getPort()));
         return urlList;
     }
 
     @RequestMapping(value = "/getServiceUrl")
     public String getServiceUrl(String name){
+
         List<ServiceInstance> instances = discoveryClient.getInstances(name);
         List<String> urlList = new ArrayList<>();
-        instances.stream().forEach((instance)->urlList.add(instance.getHost()));
-        return urlList.get((int)System.currentTimeMillis()%urlList.size());
+        instances.stream().forEach((instance)->urlList.add(instance.getHost()+":"+instance.getPort()));
+        return urlList.get(size++%urlList.size());
     }
+    static int size = 0;
 }
